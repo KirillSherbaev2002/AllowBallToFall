@@ -11,7 +11,6 @@ public class OnCollision : MonoBehaviour
         {
             player = FindObjectOfType<Player>();
             player.Touched();
-            print("Done");
         }
     }
 }

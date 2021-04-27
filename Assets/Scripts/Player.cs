@@ -29,13 +29,17 @@ public class Player : MonoBehaviour
 
     public void Touched()
     {
-        Instantiate(Collapsed, Platform.transform.position, transform.rotation = Quaternion.Euler(0, 0, 0));
         TotalCount++;
         TotalText.text = TotalCount.ToString();
         PlayerPrefs.SetInt("Num", TotalCount);
-        Destroy(Platform);
-        Instantiate(Platform, new Vector3(Platform.transform.position.x, Platform.transform.position.y + Random.Range(-10, -30), 
-            Platform.transform.position.z),
-            Quaternion.Euler(-90, transform.rotation.y + Random.Range(-180, 180), transform.rotation.z));
+        print(TotalCount);
+        var LevelV3 = new Vector3(Platform.transform.position.x, Platform.transform.position.y + Random.Range(-4, -10),
+            Platform.transform.position.z);
+        Instantiate(Platform, LevelV3,
+            Quaternion.Euler(0, transform.rotation.y + Random.Range(-180, 180), transform.rotation.z));
+        Instantiate(Collapsed);
+        print(LevelV3);
+        Platform.SetActive(true);
+        Destroy(gameObject);
     }
 }

@@ -12,6 +12,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obsticle2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1654006479181199505, guid: f487e44f8e2ae5347b3378b1dea29e17,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654006479181199505, guid: f487e44f8e2ae5347b3378b1dea29e17,
+        type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     - target: {fileID: 2355224248737122946, guid: f487e44f8e2ae5347b3378b1dea29e17,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -77,7 +87,17 @@ PrefabInstance:
         type: 3}
       propertyPath: Platform
       value: 
-      objectReference: {fileID: 1654006479181199505, guid: f487e44f8e2ae5347b3378b1dea29e17,
+      objectReference: {fileID: 1549351124211985106}
+    - target: {fileID: 2828481158023506069, guid: f487e44f8e2ae5347b3378b1dea29e17,
         type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f487e44f8e2ae5347b3378b1dea29e17, type: 3}
+--- !u!1 &1549351124211985106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1654006479181199505, guid: f487e44f8e2ae5347b3378b1dea29e17,
+    type: 3}
+  m_PrefabInstance: {fileID: 248912400177943107}
+  m_PrefabAsset: {fileID: 0}

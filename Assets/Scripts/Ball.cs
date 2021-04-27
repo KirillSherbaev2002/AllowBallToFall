@@ -5,10 +5,15 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public static bool OnPlay = true;
+    public float MaxSpeed;
+    public int score;
 
-    void Start()
+    Rigidbody rb;
+
+    void Awake()
     {
         SetPlay();
+        rb = GetComponent<Rigidbody>();
     }
 
     public void SetPause()
@@ -20,5 +25,16 @@ public class Ball : MonoBehaviour
     {
         OnPlay = true;
         Time.timeScale = 1f;
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if (Ball.OnPlay)
+        {
+            if (rb.velocity.magnitude >= 10f)
+            {
+                rb.velocity = rb.velocity.normalized * MaxSpeed;
+            }
+        }
     }
 }
